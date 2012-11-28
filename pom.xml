@@ -16,10 +16,50 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+    	<groupId>junit</groupId>
+    	<artifactId>junit</artifactId>
+    	<version>4.10</version>
+  	</dependency>
+  	  	 	
+  	<dependency>
+    	<groupId>org.hsqldb</groupId>
+    	<artifactId>hsqldb</artifactId>
+    	<version>2.2.4</version>
+	</dependency>
+
   </dependencies>
+  
+  <build>
+  <resources>
+      <resource>
+        <directory>src/resources/java</directory>
+         </resource>
+    </resources>
+    
+	<plugins>
+
+	<plugin>
+  		<groupId>org.apache.maven.plugins</groupId>
+  		<artifactId>maven-assembly-plugin</artifactId>
+    		<executions>
+      			<execution>
+         			<goals>
+           				<goal>attached</goal>
+         			</goals>
+         			<phase>package</phase>
+         			<configuration>
+           			<descriptorRefs>
+             			<descriptorRef>jar-with-dependencies</descriptorRef>
+          			</descriptorRefs>
+          			<archive>
+            			<manifest>
+              				<mainClass>zad3.zad3.Main</mainClass>
+            			</manifest>
+          			</archive>
+        			</configuration>
+     			</execution>
+  			</executions>
+		</plugin>
+	</plugins>
+	</build>
 </project>

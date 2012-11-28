@@ -1,0 +1,9 @@
+1)Jaki wzorzec projektowy zosta� zaprezentowany na diagramie?
+->Wzorzec Fakryk; Służy do tworzenia nowych obiektów, nieokreślonych,
+->lecz związanych z jednym, wspólnym interfejsem.
+->zajmuje się problemem tworzenia przedmiotów (wyrobów) bez określania
+->dokładnej klasy obiektu, który ma zostać utworzony.
+
+2)W jakich sytuacjach nale�y u�y� tego wzorca?
+->Kiedy chcemy, żeby jeden obiekt mógł tworzyć różne, powiązane ze sobą,
+->reprezentacje podobiektów określając ich typy podczas działania programu.
